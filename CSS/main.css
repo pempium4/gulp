@@ -1,0 +1,10 @@
+div{
+    background: coral;
+    display: flex;
+    flex-direction: column;
+    margin: .5rem auto;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
