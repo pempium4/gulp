@@ -3,9 +3,12 @@ const gulpConcat = require('gulp-concat');
 const gulpAutoPrefix = require('gulp-autoprefixer');
 const gulpCleanCSS = require('gulp-clean-css');
 const gulpUglify = require('gulp-uglify');
-const gulpTerser = require('gulp-terser');
+//const gulpTerser = require('gulp-terser');
 const del = require('del');
 const browserSync = require('browser-sync').create();
+
+const gulpSass = require('gulp-sass');
+const gulpSourceMaps = require('gulp-sourcemaps');
 
 const styleFiles = [
     './CSS/main.css',
@@ -15,6 +18,14 @@ const scriptFiles = [
     './JS/lib.js',
     './JS/main.js'
 ]
+
+function compileSCSS(){
+    return gulp.src('./SCSS/**/*.scss')
+        .pipe(gulpSourceMaps.init())
+        .pipe(gulpSass().on('Error', gulpSass.logError))
+        .pipe(gulpSourceMaps.write('./'))
+        .pipe(gulp.dest('./CSS/'))
+}
 
 function styles(){
     return gulp.src(styleFiles)
@@ -48,10 +59,13 @@ function watch(){
             baseDir: './'
         }
     });
+    gulp.watch('./SCSS/**/*.scss', compileSCSS);
     gulp.watch('./CSS/**/*.css', styles); //** - любая директория
     gulp.watch('./JS/**/*.js', scripts);
     gulp.watch('./*.html').on('change', browserSync.reload);
 }
+
+gulp.task('compile', compileSCSS);
 
 gulp.task('styles', styles);
 gulp.task('scripts', scripts);

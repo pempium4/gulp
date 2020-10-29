@@ -1,10 +1,17 @@
-div{
-    background: coral;
-    display: flex;
-    flex-direction: column;
-    margin: .5rem auto;
-}
-a{
+body {
+  background: antiquewhite;
+  max-width: 600px; }
+
+div {
+  background: coral;
+  display: flex;
+  flex-direction: column;
+  margin: .5rem auto; }
+  div a {
     color: white;
-    text-decoration: none;
-}
+    font-size: 1.5rem;
+    text-decoration: none; }
+  div p {
+    font-size: 1.5rem; }
+
+/*# sourceMappingURL=main.css.map */

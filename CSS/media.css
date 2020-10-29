@@ -1,8 +1,7 @@
 @media screen and (max-width: 480px) {
-    div{
-        background: greenyellow;
-    }
-    a{
-        color: black;
-    }
-}
+  div {
+    background: greenyellow; }
+    div a {
+      color: black; } }
+
+/*# sourceMappingURL=media.css.map */
