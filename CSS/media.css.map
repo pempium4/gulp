@@ -1,1 +1,0 @@
-{"version":3,"file":"media.css","sources":["media.scss"],"sourcesContent":["@media screen and (max-width: 480px) {\r\n  div{\r\n    background: greenyellow;\r\n    a{\r\n      color: black;\r\n    }\r\n  }\r\n}"],"names":[],"mappings":"AAAA,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,KAAK;EACjC,AAAA,GAAG,CAAA;IACD,UAAU,EAAE,WAAW,GAIxB;IALD,AAEE,GAFC,CAED,CAAC,CAAA;MACC,KAAK,EAAE,KAAK,GACb"}

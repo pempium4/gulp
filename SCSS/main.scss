@@ -1,14 +1,15 @@
 body{
   background: antiquewhite;
+  border: 2px solid burlywood;
   max-width: 600px;
 }
 div{
   background: coral;
   display: flex;
   flex-direction: column;
-  margin: .5rem auto;
+  margin: auto;
   a{
-    color: white;
+    color: navy;
     font-size: 1.5rem;
     text-decoration: none;
   }
