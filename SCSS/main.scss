@@ -1,6 +1,6 @@
 body{
   background: antiquewhite;
-  border: 2px solid burlywood;
+  border: 2px solid chartreuse;
   max-width: 600px;
 }
 div{
@@ -8,12 +8,15 @@ div{
   display: flex;
   flex-direction: column;
   margin: auto;
+  padding: .5rem;
   a{
-    color: navy;
+    color: chartreuse;
     font-size: 1.5rem;
+    text-align: center;
     text-decoration: none;
   }
   p{
     font-size: 1.5rem;
+    text-align: justify;
   }
 }
